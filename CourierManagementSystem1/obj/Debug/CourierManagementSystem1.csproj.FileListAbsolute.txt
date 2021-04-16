@@ -1,0 +1,7 @@
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\bin\Debug\CourierManagementSystem1.exe.config
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\bin\Debug\CourierManagementSystem1.exe
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\bin\Debug\CourierManagementSystem1.pdb
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\obj\Debug\CourierManagementSystem1.csprojAssemblyReference.cache
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\obj\Debug\CourierManagementSystem1.csproj.CoreCompileInputs.cache
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\obj\Debug\CourierManagementSystem1.exe
+C:\Users\Giuzwald Balallo\source\repos\CourierManagementSystem1\CourierManagementSystem1\obj\Debug\CourierManagementSystem1.pdb
