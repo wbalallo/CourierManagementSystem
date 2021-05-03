@@ -9,10 +9,27 @@ namespace CourierManagementSystem1
 {
     class Program
     {
+
+        static void MyMethod()
+        {
+            Console.WriteLine("\nItem Number 01");
+            Console.WriteLine("Shipper Info: Wald Balallo");
+            Console.WriteLine("Receiver Info: Juan Dela Cruz");
+            Console.WriteLine("Address Info: Sta. Rosa, Laguna");
+        }
+
+        static void MyMethod1()
+        { 
+            Console.WriteLine("\nItem Number 02");
+            Console.WriteLine("Shipper Info: Hisoka Morow");
+            Console.WriteLine("Receiver Info: Killua Zoldyck");
+            Console.WriteLine("Address Info: Greed Island");
+        }
+
         static void Main(string[] args)
         {
-            string optionSelected = "yes", shipperInfo, receiverInfo, addressInfo, editedInfo;
-            List<string> editInfo = new List<string>() {"Wald Balallo","Juan Dela Cruz","Sta. Rosa, Laguna"};
+            string optionSelected = "yes", itemInfo, shipperInfo, receiverInfo, addressInfo, editedInfo;
+            List<string> editInfo = new List<string>() {"Item Number 1","Wald Balallo","Juan Dela Cruz","Sta. Rosa, Laguna"};
             int infoIndex, numInfo;
             
 
@@ -26,6 +43,7 @@ namespace CourierManagementSystem1
             Console.WriteLine("============\n");
 
             int loginAttempts = 0;
+ 
 
             for (int i = 0; i < 3; i++)
             {
@@ -56,13 +74,13 @@ namespace CourierManagementSystem1
 
                 do
                 {
-                    Console.WriteLine("Pick a Command Number:\t");
+                    Console.WriteLine("\n\nPick a Command Number:\t");
                     Console.WriteLine("**********************\n\n");
 
                     Console.WriteLine("1. Shipment info");
                     Console.WriteLine("2. Edit/Update Shipment");
                     Console.WriteLine("3. List all Shipment");
-                    Console.WriteLine("4. Search By Consignment Number\n");
+                    Console.WriteLine("4. Search By Item Number\n");
 
                     Console.WriteLine("Enter your choice: ");
                     String choice = Console.ReadLine();
@@ -71,21 +89,24 @@ namespace CourierManagementSystem1
                     {
                         Console.WriteLine("\n\tShipment info");
                         Console.WriteLine("\t=============\n\n");
+                        Console.Write("Enter Item Number: ");
+                        itemInfo = Console.ReadLine();
                         Console.Write("Enter Shipper Info: ");
                         shipperInfo = Console.ReadLine();
                         Console.Write("Enter Receiver Info: ");
                         receiverInfo = Console.ReadLine();
-                        Console.Write("Enter Shipment Info: ");
+                        Console.Write("Enter Address Info: ");
                         addressInfo = Console.ReadLine();
 
                         Console.WriteLine("\t\nSuccessfully added new Shipment Info!");
                         Console.WriteLine("=====================================\n");
 
-                        Console.WriteLine("\nShipper Information: " +shipperInfo);
-                        Console.WriteLine("Receiver Information: "+receiverInfo);
-                        Console.WriteLine("Shipment Information: "+addressInfo);
+                        Console.WriteLine("\nItem Number: " +itemInfo);
+                        Console.WriteLine("Shipper Information: " +shipperInfo);
+                        Console.WriteLine("Receiver Information: " +receiverInfo);
+                        Console.WriteLine("Address Information: " +addressInfo);
 
-                        Console.WriteLine("\nDo you want to go back Menu?");
+                        Console.WriteLine("\n\nDo you want to go back Menu?");
                         optionSelected = Console.ReadLine().ToLower();
 
                     }
@@ -109,28 +130,57 @@ namespace CourierManagementSystem1
                         editInfo.RemoveAt(infoIndex - 1);
                         editInfo.Insert(infoIndex-1, editedInfo);
 
-                        Console.WriteLine("\nDo you want to go back Menu?");
+                        Console.WriteLine("\n\nDo you want to go back Menu?");
                         optionSelected = Console.ReadLine().ToLower();
                     }
 
 
                     if (choice == "3")
                     {
+                        Console.WriteLine("Press Enter to View the List of Shipment!\n");
+                        Console.ReadKey();
+
                         Console.WriteLine("\n\tList all Shipment");
                         Console.WriteLine("\t===================\n\n");
+
+                        MyMethod();
+                        MyMethod1();
+
+                        Console.WriteLine("\n\nDo you want to go back Menu?");
+                        optionSelected = Console.ReadLine().ToLower();
                     }
 
                     if (choice == "4")
-                    {
-                        Console.WriteLine("\n\tSearch By Consignment Number");
-                        Console.WriteLine("\t==============================\n\n");
+                    { 
+
+                            Console.WriteLine("\n\tSearch By Item Number");
+                            Console.WriteLine("\t==============================\n\n");
+
+                            Console.WriteLine("Please Type the Item Number: ");
+                            string itemNumber = Console.ReadLine();
+
+                            if (itemNumber == "01")
+                            {
+                                MyMethod();
+                            }
+
+                            if (itemNumber == "02")
+                            {
+                                MyMethod1();
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("\n\tInvalid Item Number!");
+                                Console.ReadKey();         
+                            }
+
+                            Console.WriteLine("\n\nDo you want to go back Menu?");
+                            optionSelected = Console.ReadLine().ToLower();
                     }
-                } while (optionSelected.Equals("yes"));
-                
+                } while (optionSelected.Equals("yes")); 
             }
-
             Console.ReadKey();
-
         }
     }
 }
